@@ -59,53 +59,59 @@ const students = [
 
 // Q5. find a student with the score 90
 {
+  const result = students.filter((student) => student.score === 90);
   console.log('A5.');
-  console.log(students.filter((student) => student.score === 90));
+  console.log(result);
   console.log('');
 }
 
 // Q6. make an array of enrolled students
 {
-  const enrolled_students = students.filter((student) => student.enrolled = true);
+  const result = students.filter((student) => student.enrolled = true);
   console.log('A6.');
-  console.log(enrolled_students);
+  console.log(result);
   console.log('');
 }
 
 // Q7. make an array containing only the students' scores
 // result should be: [45, 80, 90, 66, 88]
 {
+  const result = students.map((student) => student.score);
   console.log('A7.');
-  console.log(students.map((student) => student.score));
+  console.log(result);
   console.log('');
 }
 
 // Q8. check if there is a student with the score lower than 50
 {
+  const result = students.filter((student) => student.score < 50);
   console.log('A8.');
-  console.log(students.filter((student) => student.score < 50));
+  console.log(result);
   console.log('');
 }
 
 // Q9. compute students' average score
 {
+  const result = students.reduce((prev, curr) => { return prev + curr.score}, 0) / students.length;
   console.log('A9.');
-  console.log(students.reduce((prev, curr) => { return prev + curr.score}, 0) / students.length);
+  console.log(result);
   console.log('');
 }
 
 // Q10. make a string containing all the scores
 // result should be: '45, 80, 90, 66, 88'
 {
+  const result = students.map((student) => student.score).join(',');
   console.log('A10.');
-  console.log(students.map((student) => student.score).join(','));
+  console.log(result);
   console.log('');
 }
 
 // Bonus! do Q10 sorted in ascending order
 // result should be: '45, 66, 80, 88, 90'
 {
+  const result = students.map((student) => student.score).sort().join(',');
   console.log('Bonus.');
-  console.log(students.map((student) => student.score).sort().join(','));
+  console.log(result);
   console.log('');
 }
